@@ -103,8 +103,6 @@ for(i in 1:length(levels(lyft_data$driver_id))){
 
 driver_ids_complete <- data.frame(levels(lyft_data$driver_id),"Revenue"=driver_rev,"Total Rides"=as.numeric(num_rides),"Percent Prime"=percent_prime)
 
-# Start Michelle's code
-
 #Answer for 2b
 # Determine driver_lifetimes
 lyft_data2 <- lyft_data[which(is.na(lyft_data$driver_id)==FALSE),]
@@ -157,8 +155,6 @@ ggplot(lyft_data, aes(x = (arrived_at - accepted_at)/60,
        ylab("Ride Length") +
        xlim(c(0, 40)) + 
        ylim(c(0,150))
-
-#End Michelle's Code
 
 #puts together lifetime and other data
 driver_lifetimes$driver_lifetime <- as.numeric(driver_lifetimes$driver_lifetime)
